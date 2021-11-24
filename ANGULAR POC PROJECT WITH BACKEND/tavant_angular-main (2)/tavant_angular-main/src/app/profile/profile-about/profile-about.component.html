@@ -1,0 +1,18 @@
+<div class='profile-about bg-light p-2' *ngIf='profile'>
+    <div>
+        <h2 class='text-primary'>
+            {{profile.user.name.trim().split(' ')[0]}}
+        </h2>
+        <p>{{profile.bio}}</p>
+        <div class='line'></div>
+    </div>
+
+    <h2 class='text-primary'>Skill Set</h2>
+    <div class='skills'>
+
+        <div class='p-1' *ngFor='let skill of profile.skills'>
+            <span><i class='fas fa-check'></i> {{skill}} </span>
+        </div>
+
+    </div>
+</div>

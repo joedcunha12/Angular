@@ -1,0 +1,35 @@
+<div class='profile-top bg-primary p-2' *ngIf='profile'>
+    <img class='round-img my-1' src={{profile.user.avatar}} alt='' />
+    <h1 class='large'>{{profile.user.name}}</h1>
+    <p class='lead'>
+        {{profile.status}} at {{profile.company}}
+    </p>
+    <p>{{profile.location}}</p>
+    <div class='icons my-1' *ngIf='profile.social'>
+
+        <a href={{profile.website}} target='_blank'>
+            <i class='fas fa-globe fa-2x'></i>
+        </a>
+
+        <a href={{profile.social.twitter}} target='_blank'>
+            <i class='fab fa-twitter fa-2x'></i>
+        </a>
+
+        <a href={{profile.social.facebook}} target='_blank'>
+            <i class='fab fa-facebook fa-2x'>
+            </i>
+        </a>
+
+        <a href={{profile.social.linkedin}} target='_blank'>
+            <i class='fab fa-linkedin fa-2x'></i>
+        </a>
+
+        <a href={{profile.social.youtube}} target='_blank'>
+            <i class='fab fa-youtube fa-2x'></i>
+        </a>
+
+        <a href={{profile.social.instagram}} target='_blank'>
+            <i class='fab fa-instagram fa-2x'></i> </a>
+
+    </div>
+</div>

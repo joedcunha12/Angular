@@ -1,0 +1,35 @@
+<div class='profile-exp bg-white p-2' *ngIf='profile && profile.education'>
+    <div *ngIf='profile.experience'>
+        <h2 class='text-primary'>Education</h2>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>School</th>
+                        <th>DEscription</th>
+                        <th>TO</th>
+                        <th>From</th>
+                        <th>Degree</th>
+                        <th>Field Of Study</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let edu of profile.education'>
+                        <td>{{edu.school}}</td>
+                        <td>{{edu.description}}</td>
+                        <td>{{edu.to|date}}</td>
+                        <td>{{edu.from|date}}</td>
+                        <td>{{edu.degree}}</td>
+                        <td>{{edu.fieldofstudy}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <h4 *ngIf='!profile.experience'>No experience credentials</h4>
+
+</div>

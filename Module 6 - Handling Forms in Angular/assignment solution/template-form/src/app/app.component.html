@@ -1,0 +1,51 @@
+
+<div style="text-align:center; padding: 20px;">
+  <h3>
+    User Registration using Template driven form
+  </h3>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4 offset-md-4">
+          <form name="signup_form" (ngSubmit)="fs.form.valid && signup(fs);" #fs="ngForm" novalidate>
+            <div class="formbox">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Full Name" 
+                  name="fullname"/>
+                                  </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone No."/>                  
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>                                
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="confirm_password" id="confirm_password" 
+                  placeholder="Confirm Password"/>               
+                  
+                </div>
+                <div class="form-group">
+                  <div class="checkboxrow">
+                    <input type="checkbox" id="test1" name="cb">
+                    <label for="test1" control-label>Agree with terms and conditions</label>                   
+                  </div>
+                </div>
+                <div class="form-group">         
+                  <button type="submit" class="btn btn-primary signin">Sign Up <span class="arrowbtn"><span
+                        class="fa fa-arrow-right"></span></span></button>
+                </div>
+              </div>
+          </form>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,30 @@
+<div>
+  <h4 class="mb-2">Experience Credentials</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Years</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let experience of experiences">
+        <td>{{ experience.company }}</td>
+        <td>{{ experience.title }}</td>
+        <td>
+          {{ experience.from | date: "MM/dd/yyyy" }} -
+          {{ experience.to | date: "MM/dd/yyyy" }}
+        </td>
+        <td>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr> -->
+
+      <tr *ngFor="let experience of experienceList">
+        <app-experience-item [experience]="experience"></app-experience-item>
+      </tr>
+    </tbody>
+  </table>
+</div>

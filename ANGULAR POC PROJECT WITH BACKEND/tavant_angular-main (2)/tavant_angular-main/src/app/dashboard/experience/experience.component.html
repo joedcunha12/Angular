@@ -1,0 +1,21 @@
+<table class="table" *ngIf='profile && profile.experience'>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let ex of profile.experience'>
+            <td scope="row">{{ex.title}}</td>
+            <td scope="row">{{ex.company}}</td>
+            <td scope="row">{{ex.from|date}}</td>
+            <td scope="row">{{ex.to|date}}</td>
+            <td scope="row">{{ex.description}}</td>
+        </tr>
+
+    </tbody>
+</table>

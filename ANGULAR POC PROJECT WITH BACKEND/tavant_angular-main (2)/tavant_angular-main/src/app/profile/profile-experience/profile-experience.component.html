@@ -1,0 +1,35 @@
+<div class='profile-exp bg-white p-2' *ngIf='profile && profile.experience'>
+    <div *ngIf='profile.experience'>
+        <h2 class='text-primary'>Experience</h2>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>TItle</th>
+                        <th>COmpany</th>
+                        <th>Location</th>
+                        <th>DEscription</th>
+                        <th>TO</th>
+                        <th>From</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let exp of profile.experience'>
+                        <td>{{exp.title}}</td>
+                        <td>{{exp.company}}</td>
+                        <td>{{exp.location}}</td>
+                        <td>{{exp.description}}</td>
+                        <td>{{exp.to|date}}</td>
+                        <td>{{exp.from|date}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <h4 *ngIf='!profile.experience'>No experience credentials</h4>
+
+</div>

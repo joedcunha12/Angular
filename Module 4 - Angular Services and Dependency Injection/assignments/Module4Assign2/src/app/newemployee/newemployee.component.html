@@ -1,0 +1,23 @@
+<br />
+<div class="col">
+  <h3>Employees data from API</h3>
+
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of emplist.slice(0, 10)">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.employee_name }}</td>
+        <td>{{ emp.employee_salary }}</td>
+        <td>{{ emp.employee_age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

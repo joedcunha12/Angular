@@ -1,0 +1,43 @@
+<div>
+    <h1 class="large text-primary">Add An Experience</h1>
+    <p class="lead">
+        <i class="fas fa-code-branch"></i> Add any developer/programming positions
+        that you have had in the past
+    </p>
+    <small>* = required field</small>
+    <form class="form" (ngSubmit)="addExperience()">
+        <div class="form-group">
+            <input type="text" placeholder="* Job Title" name="title" [(ngModel)]="experience.title" value="title"
+                required />
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="* Company" name="company" [(ngModel)]="experience.company" value="company"
+                required />
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Location" name="location" [(ngModel)]="experience.location"
+                value="location" />
+        </div>
+        <div class="form-group">
+            <h4>From Date</h4>
+            <input type="date" name="from" [(ngModel)]="experience.from" value="from" />
+        </div>
+        <div class="form-group">
+            <p>
+                <input type="checkbox" name="current" checked="current" value="current"
+                    [(ngModel)]="experience.current" />
+                Current Job
+            </p>
+        </div>
+        <div class="form-group">
+            <h4>To Date</h4>
+            <input type="date" name="to" [(ngModel)]="experience.to" value="to" />
+        </div>
+        <div class="form-group">
+            <textarea name="description" cols="30" rows="5" placeholder="Job
+        Description" value="description" [(ngModel)]="experience.description"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary my-1" />
+        <a class="btn btn-light my-1" to="/dashboard"> Go Back </a>
+    </form>
+</div>

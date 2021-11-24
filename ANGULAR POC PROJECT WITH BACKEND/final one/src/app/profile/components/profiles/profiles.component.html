@@ -1,0 +1,23 @@
+<div class="profiles">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-4 text-center">Developer Profiles</h1>
+        <p class="lead text-center">Browse and connect with developers</p>
+        {{ profiles | json }}
+        <input
+          type="text"
+          placeholder="search here........"
+          class="form-control"
+          [(ngModel)]="query"
+        />
+        <div
+          class="card card-body bg-light mb-3"
+          *ngFor="let p of profiles | search: query"
+        >
+          <app-profiles-items [profile]="p" appHighlight></app-profiles-items>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<td>{{ education.school }}</td>
+<td>{{ education.degree }}</td>
+<td>
+  {{ education.from | date: "MM/dd/yyyy" }} -
+  {{ education.to | date: "MM/dd/yyyy" }}
+</td>
+<td>
+  <a
+    class="btn btn-danger"
+    routerLink="/dashboard/user/delete-education/{{ education._id }}"
+  >
+    Delete
+  </a>
+</td>

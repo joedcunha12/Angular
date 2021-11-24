@@ -1,0 +1,58 @@
+<pre>
+    <!-- {{profile|json}} -->
+</pre>
+
+<div>
+
+
+    <div>
+        <a routerLink='/profiles' class='btn btn-light'>
+            Back to Profiles
+        </a>
+        <div *ngIf='profile && data.user.id === profile.user._id'>
+
+            <a routerLink='/profiles/edit-profile' class='btn btn-dark'>
+                Edit Profile
+            </a>
+
+        </div>
+
+        <div class='profile-grid my-1'>
+            <app-profile-top [profile]='profile'></app-profile-top>
+            <app-profile-about [profile]='profile'></app-profile-about>
+            <app-profile-experience [profile]='profile'></app-profile-experience>
+            <app-profile-education [profile]='profile'></app-profile-education>
+            <!-- <ProfileAbout profile={profile} />
+            <div class='profile-exp bg-white p-2'>
+                <h2 class='text-primary'>Experience</h2>
+                {profile.experience.length > 0 ? (
+                <div>
+                    {profile.experience.map(experience => (
+                    <ProfileExperience key={experience._id} experience={experience} />
+                    ))}
+                </div>
+                ) : (
+                <h4>No experience credentials</h4>
+                )}
+            </div>
+
+            <div class='profile-edu bg-white p-2'>
+                <h2 class='text-primary'>Education</h2>
+                {profile.education.length > 0 ? (
+                <div>
+                    {profile.education.map(education => (
+                    <ProfileEducation key={education._id} education={education} />
+                    ))}
+                </div>
+                ) : (
+                <h4>No education credentials</h4>
+                )}
+            </div>
+
+            {profile.githubusername && (
+            <ProfileGithub username={profile.githubusername} />
+            )} -->
+        </div>
+    </div>
+
+</div>

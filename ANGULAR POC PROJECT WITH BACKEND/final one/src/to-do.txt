@@ -1,0 +1,6 @@
+1. Edit Profile
+2. Add Experience -  move back to dashboard
+3. Add Education - move back to dashboard
+
+- Create component
+ - Create service methods in profile service

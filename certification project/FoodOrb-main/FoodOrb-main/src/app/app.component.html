@@ -1,0 +1,104 @@
+<!-- required bootstrap js -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="../assets/pngegg.png" alt="" height="34">
+      <span class="ml-2">FoodOrb</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-md-5 mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/friends">Friends</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item ml-4" routerLinkActive="active">
+          <a class="nav-link" routerLink="/orders"><i class="fa fa-shopping-cart"></i> Orders</a>
+        </li>
+
+        <li *ngIf="!loggedIn" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="!loggedIn" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/register">Sign Up</a>
+        </li>
+        <li *ngIf="loggedIn" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            My Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/setting">Profile</a>
+            <a class="dropdown-item" routerLink="/setting">Setting</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="logoutUser()">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- add 'footer' snippet in css -->
+<!--<div class="footer-v1 bg-dark text-light py-3">-->
+<!--  <div class="footer no-margin">-->
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-3">-->
+<!--          <div class="headline">-->
+<!--            <p>Exams</p>-->
+<!--          </div>-->
+<!--          <ul class="list-unstyled link-list">-->
+<!--            <li><a href="#">Exam1</a></li>-->
+<!--            <li><a href="#">Exam2</a></li>-->
+<!--            <li><a href="#">Exam3</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--          <div class="headline">-->
+<!--            <p>Resources</p>-->
+<!--          </div>-->
+<!--          <ul class="list-unstyled link-list">-->
+<!--            <li><a href="#">Blog</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--          <div class="headline">-->
+<!--            <p>Support</p>-->
+<!--          </div>-->
+<!--          <address>-->
+<!--            <ul class="list-unstyled link-list">-->
+<!--              <li><a href="#">Contact Us</a></li>-->
+<!--              <li>-->
+<!--                <a href="#"><i class="fa fa-envelope"></i>support@company.com</a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </address>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--          <div class="headline">-->
+<!--            <p>Company</p>-->
+<!--          </div>-->
+<!--          <ul class="list-unstyled link-list">-->
+<!--            <li><a href="#">About Us</a></li>-->
+<!--            <li><a href="#">Privacy Policy</a></li>-->
+<!--            <li><a href="#">Terms of Use</a></li>-->
+<!--            <li><a href="#">FAQs</a></li>-->
+<!--            <li><a href="#">Cancellation/Rescheduling policy</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

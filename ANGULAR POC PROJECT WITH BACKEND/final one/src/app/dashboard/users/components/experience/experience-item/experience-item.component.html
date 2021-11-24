@@ -1,0 +1,15 @@
+<td>{{ experience.company }}</td>
+<td>{{ experience.title }}</td>
+<td>
+  {{ experience.from | date: "MM/dd/yyyy" }} -
+  {{ experience.to | date: "MM/dd/yyyy" }}
+</td>
+<td>
+  {{ experience._id }}
+  <a
+    class="btn btn-danger"
+    routerLink="/dashboard/user/delete-experience/{{ experience._id }}"
+  >
+    Delete
+  </a>
+</td>
